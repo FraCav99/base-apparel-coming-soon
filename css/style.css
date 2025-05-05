@@ -54,7 +54,40 @@ main {
   }
 
   form {
+    --_border-radius: 32px;
     margin-top: 2rem;
+
+    .input-field {
+      display: flex;
+      border-radius: var(--_border-radius);
+      border: 1px solid var(--desatured-red);
+
+      .input-wrapper {
+        flex-grow: 1;
+        input {
+          background-color: transparent;
+          border: none;
+          padding: 0.75rem 0 0.75rem 1.5rem;
+          outline: none;
+          width: 100%;
+          &::placeholder {
+            color: var(--desatured-red);
+          }
+        }
+      }
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background-image: var(--linear-gradient-2);
+      border-radius: var(--_border-radius);
+      box-shadow: var(--box-shadow-btn);
+      padding: 0;
+      min-inline-size: clamp(4rem, 3.2174rem + 3.913vw, 6.25rem);
+      display: grid;
+      place-items: center;
+    }
   }
 }
 
