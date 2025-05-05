@@ -22,6 +22,9 @@
   );
 
   --box-shadow-btn: 0 15px 20px 0 hsl(0, 40%, 60% / 24.76%);
+
+  /* Logo fluid dimensions */
+  --fluid-100-158: clamp(6.25rem, 4.9891rem + 6.3043vw, 9.875rem);
 }
 
 /* 1. Use a more-intuitive box-sizing model */
