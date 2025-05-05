@@ -25,6 +25,12 @@
 
   /* Logo fluid dimensions */
   --fluid-100-158: clamp(6.25rem, 4.9891rem + 6.3043vw, 9.875rem);
+
+  /* Fluid letter-spacing for title */
+  --fluid-10-17: clamp(0.6769rem, 0.5358rem + 0.7054vw, 1.0825rem);
+
+  /* Fluid title line-height */
+  --fluid-42-71: clamp(2.625rem, 1.9946rem + 3.1522vw, 4.4375rem);
 }
 
 /* 1. Use a more-intuitive box-sizing model */
