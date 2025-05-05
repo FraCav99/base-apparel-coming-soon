@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="challenge-wrapper">
+      <header>
+        <img src="images/logo.svg" alt="base apparel" />
+      </header>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/hero-desktop.jpg" />
+        <img src="images/hero-mobile.jpg" alt="" />
+      </picture>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <main>
+        <h1>
+          <span>We're</span>
+          <span>coming</span>
+          <span>soon</span>
+        </h1>
 
-  We're coming soon
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+        <form novalidate>
+          <label for="user-email sr-only">Email Address</label>
+          <input
+            type="email"
+            id="user-email"
+            name="user-email"
+            autocomplete="email"
+            required
+            placeholder="Email Address"
+          />
+          <button type="submit">
+            <img src="images/icon-arrow.svg" alt="submit to our newsletter" />
+          </button>
+        </form>
+      </main>
+    </div>
 
-  Email Address
-  
-  <footer>
+    <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">FraCav99</a>.
     </p>
-  </footer>
-</body>
+  </footer> -->
+  </body>
 </html>
