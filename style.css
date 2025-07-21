@@ -1,0 +1,56 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+main {
+  display: grid;
+}
+@media screen and (min-width: 760px) {
+  main {
+    grid-template-columns: 1fr 1440px 1fr;
+    align-content: center;
+  }
+}
+.main-content-wrapper {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+
+  header {
+    padding: 2rem 1.5rem;
+  }
+
+  header img {
+    width: 100px;
+    @media screen and (min-width: 760px) {
+      width: auto;
+    }
+  }
+
+  .central-content-wrapper {
+    align-content: center;
+  }
+
+  @media screen and (min-width: 760px) {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 445px 1fr auto;
+    grid-column: 2;
+    grid-template-areas:
+      ". header . picture"
+      ". central-content . picture";
+
+    header {
+      grid-area: header;
+    }
+
+    picture {
+      grid-area: picture;
+    }
+
+    .central-content-wrapper {
+      grid-area: central-content;
+    }
+  }
+}
