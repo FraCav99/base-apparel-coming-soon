@@ -1,0 +1,81 @@
+:root {
+  --primary-clr-100: hsl(0, 36%, 70%);
+  --primary-clr-200: hsl(0, 93%, 68%);
+
+  --neutral-clr-100: hsl(0, 6%, 24%);
+
+  --linear-gradient-100: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  --linear-gradient-200: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
