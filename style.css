@@ -36,6 +36,34 @@ main {
 
   .central-content-wrapper {
     align-content: center;
+    padding-inline: clamp(2rem, -6.649rem + 43.243vw, 21rem);
+    padding-block: 2rem;
+    text-align: center;
+    color: var(--primary-clr-100);
+
+    h1 {
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      font-weight: 300;
+
+      span {
+        display: block;
+        letter-spacing: 0.25em;
+        & + span {
+          color: var(--neutral-clr-100);
+          font-weight: 600;
+        }
+      }
+    }
+
+    .subtitle {
+      margin-top: 1.5rem;
+    }
+
+    form {
+      margin-top: 2rem;
+    }
   }
 
   @media screen and (min-width: 1024px) {
@@ -76,4 +104,15 @@ footer {
   padding: 2rem;
   text-align: center;
   font-size: 0.875rem;
+}
+
+/* Utility */
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
