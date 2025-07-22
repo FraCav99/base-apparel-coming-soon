@@ -39,6 +39,7 @@ main {
     padding: 2rem;
     text-align: center;
     color: var(--primary-clr-100);
+    max-width: 460px;
 
     h1 {
       line-height: 1.2;
@@ -141,7 +142,7 @@ main {
       grid-area: central-content;
       text-align: start;
       padding-inline: 0;
-
+      max-width: none;
       h1 {
         font-size: 4rem;
       }
