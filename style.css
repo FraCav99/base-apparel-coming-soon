@@ -63,6 +63,22 @@ main {
 
     form {
       margin-top: 2rem;
+      display: flex;
+
+      input {
+        padding: 0.85em 2em;
+        border-inline-end: 0;
+        border-block: 1px solid var(--primary-clr-100);
+        border-inline-start: 1px solid var(--primary-clr-100);
+        border-top-left-radius: 28px;
+        border-bottom-left-radius: 28px;
+        background-color: transparent;
+        outline: none;
+
+        &::placeholder {
+          color: var(--primary-clr-100);
+        }
+      }
     }
   }
 
