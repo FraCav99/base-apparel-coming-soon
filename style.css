@@ -5,11 +5,12 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
 }
+
 main {
   display: grid;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 1024px) {
   main {
     grid-template-columns: minmax(2rem, 1fr) minmax(0, 1440px) minmax(2rem, 1fr);
     align-content: center;
@@ -19,23 +20,25 @@ main {
 .main-content-wrapper {
   display: grid;
   grid-template-rows: auto auto 1fr;
+  background-image: var(--linear-gradient-100);
 
   header {
     padding: 2rem 1.5rem;
+    background-color: white;
+    img {
+      width: 100px;
+    }
   }
 
-  header img {
-    width: 100px;
-    @media screen and (min-width: 760px) {
-      width: auto;
-    }
+  picture img {
+    width: 100%;
   }
 
   .central-content-wrapper {
     align-content: center;
   }
 
-  @media screen and (min-width: 760px) {
+  @media screen and (min-width: 1024px) {
     grid-template-rows: auto 1fr;
     grid-template-columns: minmax(1.5rem, 1fr) 445px minmax(1.5rem, 1fr) auto;
     grid-column: 2;
@@ -50,10 +53,17 @@ main {
     header {
       grid-area: header;
       padding-inline: 0;
+      background-color: transparent;
+      img {
+        width: auto;
+      }
     }
 
     picture {
       grid-area: picture;
+      img {
+        width: auto;
+      }
     }
 
     .central-content-wrapper {
