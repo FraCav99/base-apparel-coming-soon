@@ -35,9 +35,8 @@ main {
   }
 
   .central-content-wrapper {
-    align-content: center;
-    padding-inline: clamp(2rem, -6.649rem + 43.243vw, 21rem);
-    padding-block: 2rem;
+    place-self: center;
+    padding: 2rem;
     text-align: center;
     color: var(--primary-clr-100);
 
@@ -64,21 +63,46 @@ main {
     form {
       margin-top: 2rem;
       display: flex;
+      border: 1px solid var(--primary-clr-100);
+      border-radius: 28px;
 
       input {
         padding: 0.85em 2em;
-        border-inline-end: 0;
-        border-block: 1px solid var(--primary-clr-100);
-        border-inline-start: 1px solid var(--primary-clr-100);
-        border-top-left-radius: 28px;
-        border-bottom-left-radius: 28px;
         background-color: transparent;
         outline: none;
-
+        border: none;
+        width: 90%;
         &::placeholder {
           color: var(--primary-clr-100);
         }
       }
+
+      .alert-icon {
+        align-self: center;
+        opacity: 0;
+      }
+
+      button {
+        outline: none;
+        border: none;
+        background-color: var(--primary-clr-100);
+        background-image: var(--linear-gradient-200);
+        cursor: pointer;
+        border-radius: 28px;
+        display: grid;
+        place-items: center;
+        margin-left: 1rem;
+        width: 30%;
+        max-width: 6.25rem;
+      }
+    }
+
+    .error-message {
+      text-align: start;
+      margin-top: 1rem;
+      padding-inline-start: 2em;
+      color: var(--primary-clr-200);
+      opacity: 0;
     }
   }
 
