@@ -68,8 +68,7 @@ main {
       border-radius: 28px;
 
       &.form-invalid {
-        border-color: var(--primary-clr-200);
-        border-width: 2px;
+        outline: 2px solid var(--primary-clr-200);
       }
 
       input {
@@ -81,11 +80,19 @@ main {
         &::placeholder {
           color: var(--primary-clr-100);
         }
+        &::selection {
+          color: white;
+          background-color: var(--primary-clr-100);
+        }
       }
 
       .alert-icon {
         align-self: center;
         opacity: 0;
+      }
+
+      &.form-invalid .alert-icon {
+        opacity: 1;
       }
 
       button {
@@ -100,6 +107,18 @@ main {
         margin-left: 1rem;
         width: 30%;
         max-width: 6.25rem;
+        scale: 1.1;
+        box-shadow: 0px 22px 63px -15px rgba(0, 0, 0, 0.35);
+        -webkit-box-shadow: 0px 22px 63px -15px rgba(0, 0, 0, 0.35);
+        -moz-box-shadow: 0px 22px 63px -15px rgba(0, 0, 0, 0.35);
+
+        &:hover,
+        &:focus {
+          filter: brightness(1.25);
+          -webkit-box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.28);
+          -moz-box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.28);
+          box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.28);
+        }
       }
     }
 
