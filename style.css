@@ -67,6 +67,11 @@ main {
       border: 1px solid var(--primary-clr-100);
       border-radius: 28px;
 
+      &.form-invalid {
+        border-color: var(--primary-clr-200);
+        border-width: 2px;
+      }
+
       input {
         padding: 0.85em 2em;
         background-color: transparent;
@@ -103,7 +108,10 @@ main {
       margin-top: 1rem;
       padding-inline-start: 2em;
       color: var(--primary-clr-200);
-      opacity: 0;
+      &[aria-hidden] {
+        opacity: 0;
+        pointer-events: none;
+      }
     }
   }
 
