@@ -46,6 +46,7 @@
             <span>coming</span>
             <span>soon</span>
           </h1>
+
           <p class="subtitle">
             Hello fellow shoppers! We're currently building our new fashion
             store. Add your email below to stay up-to-date with announcements
@@ -64,6 +65,7 @@
             />
 
             <img src="./images/icon-error.svg" alt="" class="alert-icon" />
+
             <button type="submit">
               <img
                 src="./images/icon-arrow.svg"
@@ -72,8 +74,8 @@
             </button>
           </form>
 
-          <p id="error" class="error-message" aria-hidden="true">
-            Please provide a valid email
+          <p id="error" class="error-message" aria-live="assertive">
+            <span hidden>Please provide a valid email</span>
           </p>
         </div>
       </div>

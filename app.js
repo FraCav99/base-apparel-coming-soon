@@ -27,12 +27,12 @@ function cleanErrors() {
   form.email.removeAttribute("aria-invalid");
   form.email.removeAttribute("aria-describedby");
   form.classList.remove("form-invalid");
-  errorMessage.setAttribute("aria-hidden", "true");
+  errorMessage.firstElementChild.setAttribute("hidden", "");
 }
 
 function triggerErrors() {
   form.email.setAttribute("aria-invalid", "true");
   form.classList.add("form-invalid");
   form.email.setAttribute("aria-describedby", errorMessage.id);
-  errorMessage.removeAttribute("aria-hidden");
+  errorMessage.firstElementChild.removeAttribute("hidden");
 }
