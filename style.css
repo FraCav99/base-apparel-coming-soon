@@ -69,6 +69,9 @@ main {
 
       &.form-invalid {
         outline: 2px solid var(--primary-clr-200);
+        .alert-icon {
+          opacity: 1;
+        }
       }
 
       input {
@@ -91,10 +94,6 @@ main {
       .alert-icon {
         align-self: center;
         opacity: 0;
-
-        &.form-invalid & {
-          opacity: 1;
-        }
       }
 
       button {
@@ -125,11 +124,6 @@ main {
       margin-top: 1rem;
       padding-inline-start: 2em;
       color: var(--primary-clr-200);
-
-      &[aria-hidden] {
-        opacity: 0;
-        pointer-events: none;
-      }
     }
   }
 }
