@@ -180,6 +180,11 @@ footer {
   padding: 2rem;
   text-align: center;
   font-size: 0.875rem;
+  a {
+    color: var(--primary-clr-100);
+    font-weight: 600;
+    text-decoration-line: none;
+  }
 }
 
 /* Utility Classes */
