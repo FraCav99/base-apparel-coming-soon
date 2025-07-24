@@ -8,10 +8,8 @@ body {
 
 main {
   display: grid;
-}
 
-@media screen and (min-width: 1024px) {
-  main {
+  @media screen and (min-width: 1024px) {
     grid-template-columns: minmax(2rem, 1fr) minmax(0, 1440px) minmax(2rem, 1fr);
     align-content: center;
   }
@@ -25,6 +23,7 @@ main {
   header {
     padding: 2rem 1.5rem;
     background-color: white;
+
     img {
       width: 100px;
     }
@@ -50,6 +49,7 @@ main {
       span {
         display: block;
         letter-spacing: 0.25em;
+
         & + span {
           color: var(--neutral-clr-100);
           font-weight: 600;
@@ -77,9 +77,11 @@ main {
         outline: none;
         border: none;
         width: 90%;
+
         &::placeholder {
           color: var(--primary-clr-100);
         }
+
         &::selection {
           color: white;
           background-color: var(--primary-clr-100);
@@ -89,10 +91,10 @@ main {
       .alert-icon {
         align-self: center;
         opacity: 0;
-      }
 
-      &.form-invalid .alert-icon {
-        opacity: 1;
+        &.form-invalid & {
+          opacity: 1;
+        }
       }
 
       button {
@@ -109,14 +111,10 @@ main {
         max-width: 6.25rem;
         scale: 1.1;
         box-shadow: 0px 22px 63px -15px rgba(0, 0, 0, 0.35);
-        -webkit-box-shadow: 0px 22px 63px -15px rgba(0, 0, 0, 0.35);
-        -moz-box-shadow: 0px 22px 63px -15px rgba(0, 0, 0, 0.35);
 
         &:hover,
         &:focus {
           filter: brightness(1.25);
-          -webkit-box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.28);
-          -moz-box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.28);
           box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.28);
         }
       }
@@ -127,14 +125,17 @@ main {
       margin-top: 1rem;
       padding-inline-start: 2em;
       color: var(--primary-clr-200);
+
       &[aria-hidden] {
         opacity: 0;
         pointer-events: none;
       }
     }
   }
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .main-content-wrapper {
     grid-template-rows: auto 1fr;
     grid-template-columns: minmax(1.5rem, 1fr) 445px minmax(1.5rem, 1fr) auto;
     grid-column: 2;
@@ -144,15 +145,13 @@ main {
 
     background-image: url("./images/bg-pattern-desktop.svg"),
       var(--linear-gradient-100);
-
     box-shadow: 0px 10px 25px 2px rgba(0, 0, 0, 0.24);
-    -webkit-box-shadow: 0px 10px 25px 2px rgba(0, 0, 0, 0.24);
-    -moz-box-shadow: 0px 10px 25px 2px rgba(0, 0, 0, 0.24);
 
     header {
       grid-area: header;
       padding-inline: 0;
       background-color: transparent;
+
       img {
         width: auto;
       }
@@ -160,6 +159,7 @@ main {
 
     picture {
       grid-area: picture;
+
       img {
         width: auto;
       }
@@ -170,6 +170,7 @@ main {
       text-align: start;
       padding-inline: 0;
       max-width: none;
+
       h1 {
         font-size: 4rem;
       }
@@ -187,7 +188,7 @@ footer {
   font-size: 0.875rem;
 }
 
-/* Utility */
+/* Utility Classes */
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
